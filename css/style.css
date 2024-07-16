@@ -1,0 +1,345 @@
+/* ここから下に記載していく */
+html {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* フォントを游ゴシックに変更 */
+body{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+/* 画像の最大幅を親要素に合わせる */
+img{
+    max-width: 100%;
+}
+
+header {
+    /* ロゴとulを横に並べる */
+    display: flex; 
+    position: sticky; /*はじめは通常の要素と同じように存在し、スクロールをすると親要素内の決まった位置に固定される動きをする*/
+    top: 0;  /**画面の上部からの距離が0の場所に固定*/
+    z-index: 999; /*画面の最前面に指定　スクロールしてもほかの要素の下に行かないよ*/
+    background-color: white;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.abovemenu {
+    font-size: 21px;
+    margin-left: auto;
+}
+
+.menulist {
+    /* liを横に並べる */
+    display: flex;
+}
+
+.menu {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.menu:hover{
+    border-bottom: 2px solid #ffd61a; /* 下線の太さや色を指定します */
+}
+
+.noline {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 640px) {
+    .abovemenu {
+        display: none;
+     }
+    }
+
+.kasaneru {
+    position: relative; /* 親要素にrelative */
+}
+
+.tomato{
+    width: 100%; /* divの幅に対する割合 */
+}
+
+.sentence {
+    position: absolute; /* 子要素にabsolote */
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);/*センター寄せの修正*/
+}
+
+.sekaiwo {
+    text-align: center; /*テキストを中央ぞろえ*/
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px; /*下の文章との余白を15pxに*/
+}
+
+.cheese {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin: 30px; /*上の文章との余白を15pxに*/
+}
+
+.title {
+    text-align: center;
+    margin: 60px;
+}
+
+.about {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd61a;
+    margin-bottom: 30px;
+}
+
+.stabout {
+    font-size: 18px;
+}
+
+.text1 {
+    text-align: center;
+    font-style: 16px;
+}
+
+.text1_1 {
+    margin-bottom: 30px;
+    line-height: 2.0em;
+}
+
+.text1_2 {
+    margin-bottom: 40px;
+    line-height: 2.0em;
+}
+
+.text1_3 {
+    margin-bottom: 40px;
+}
+
+.text1_4 {
+    margin-bottom: 80px;
+    line-height: 2.0em;
+}
+
+.container1 {
+    display: flex;
+    width: 1200px;
+}
+
+.course {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.text2_1 {
+    line-height: 2.0em;
+}
+
+.courseimg {
+    width: 600px;
+    height: 350px;
+}
+
+.textbox {
+    position: relative; /* 親要素にrelative */
+    width: 600px;
+    height: 350px;
+    background-color: #fafafa;
+    
+}
+
+.text2_2 {
+    width:480px;
+    position: absolute; /* 子要素にabsolote */
+    top: 50%;
+    left: 50px;
+    transform: translate(0%,-50%);/*センター寄せの修正*/
+}
+
+.title2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.text2_3 {
+    line-height: 1.5em;
+}
+
+.text2_4 {
+    width:480px;
+    position: absolute; /* 子要素にabsolote */
+    top: 50%;
+    right: 50px;
+    transform: translate(50px,-50%); /*センター寄せの修正*/
+}
+
+.box {
+    display: flex;  /*要素を横並び*/
+    justify-content: center; /*横並びにした要素を画面中央ぞろえ*/
+    column-gap: 30px; /*横並びの要素間の余白を30px*/
+}
+
+.item {
+    width: 300px;
+}
+
+.item:hover {
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+.date {
+    margin-top: 30px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.newstext {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.container2 {
+    width: 100%;
+    height: auto;
+    /* 画面の横幅いっぱいの箱を作成 */
+}
+
+.info {
+    background-color: #ffd61a;
+    color: white;
+    font-size: 18px;
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px; /*行の高さを60pxに指定。ブロックの高さが60pxなので、自動的に上下中央に配置される*/
+    /* 縦60  横300の箱を作り、上下余白0、左右余白を均等にした */
+}
+
+/* ホバーアクション */
+.info:hover {
+    background-color: white;
+    color: #ffd61a;
+    border: solid 3px #ffd61a; /*3pxの黄色線で囲む*/
+    transform: scale(1.1);
+}
+
+.container3 {
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    padding: 60px 0;
+    /* 画面の横幅いっぱいの箱を作成 */
+}
+
+.access {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.accesstable {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rowname {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.rowname {
+    width: 200px;
+    height: 50px;
+}
+
+.form {
+    margin-top: 30px;
+    margin-bottom: 30px
+    ;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1.5px solid  #bfbfbf;
+}
+
+.formname1 {
+    vertical-align: top;
+    border-top: 1.5px solid #bfbfbf;
+    border-right:1.5px solid #bfbfbf ;
+    width: 240px;
+    height: auto;
+    padding:15px 64px 15px 16px;
+    line-height: 1.5em;
+    box-sizing: border-box; /* 箱の大きさをWidthに指定して、padding,borderの影響をなくす*/
+}
+
+.formname2{
+    border-top: 1.5px solid #bfbfbf;
+    width: 400px;
+    height: auto;
+    padding: 8px 0px 8px 8px;
+    box-sizing: border-box; /* 箱の大きさをWidthに指定して、padding,borderの影響をなくす*/
+}
+
+.formbox1 {
+    width: 328px;
+    height: 36px;
+    border:1px solid #bfbfbf;
+    box-sizing: border-box; /* 箱の大きさをWidthに指定して、padding,borderの影響をなくす*/
+}
+
+.formname3 {
+    border-top: 1.5px solid #bfbfbf;
+    width: auto;
+    height: auto;
+    padding: 12px 0px 12px 8px;
+    box-sizing: border-box; /* 箱の大きさをWidthに指定して、padding,borderの影響をなくす*/
+}
+
+h3 {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.formbox2 {
+    width: 328px;
+    height: 100px;
+    border:1px solid #bfbfbf;
+    box-sizing: border-box; /* 箱の大きさをWidthに指定して、padding,borderの影響をなくす*/
+}
+
+.soshin {
+    text-align: center;
+    margin-bottom: 140px;
+}
+
+footer {
+    background-color: #707070;
+    width: auto;
+    height: auto;
+    padding: 30px 0 30px 0;
+}
+
+.copy {
+    text-align: center;
+    color: #fafafa;
+}
+
+.checkbox {
+    position: relative;
+    top: 1.5px;
+    margin-right: 30px;
+}
